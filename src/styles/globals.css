@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,6 +17,34 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+
+.bg-gradient-animation {
+  animation: gradientAnimation 0.8s linear infinite;
+  background: linear-gradient(45deg, #202123, #040506);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.bg-fire {
+  background-image: url('/fire-background.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+
 
 
 

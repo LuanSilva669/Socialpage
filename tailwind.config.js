@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'roboto-condensed': ['Roboto Condensed', 'sans-serif'],
+        'space-mono': ['Space Mono', 'monospace'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +19,4 @@ module.exports = {
     },
   },
   plugins: [],
-  
-}
-
+};
