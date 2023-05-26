@@ -1,5 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { FaFacebook, FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 const HomePage = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -24,14 +27,16 @@ const HomePage = () => {
 
       <header className="bg-black py-4">
         <div className="container flex items-center justify-start mx-auto">
-          <img src="/hlogo.png" className="h-12 w-auto" alt="Logo" />
+        <Image src="/hlogo.png" alt="Logo" width={90} height={200} />
+
         </div>
       </header>
 
       <div className="flex-grow flex items-center justify-center">
         <div className="bg-black p-8 rounded-lg shadow-md text-center">
           <div className="flex items-center justify-center mb-4">
-            <img src="/toplogo.png" className="h-12 w-auto" alt="Logo" />
+          <img src="/toplogo.png" alt="Logo" width={200} />
+
           </div>
      
           <p className="text-gray-400 mb-4 font-space-mono">
