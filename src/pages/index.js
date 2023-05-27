@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
@@ -186,7 +187,7 @@ const HomePage = () => {
             </form>
             <div className="mt-6 text-center">
               <p className="text-white">
-                Don't have an account?{" "}
+                Dont have an account?{" "}
                 <a href="#" className="text-blue-600">
                   Join now
                 </a>
