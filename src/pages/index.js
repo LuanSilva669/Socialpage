@@ -130,7 +130,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <footer className="bg-black py-2">
+      <footer className="bg-black py-1">
         <div className="container flex justify-center mx-auto">
           <FaGithub
             className="text-3xl text-white cursor-pointer hover:text-gray-200"
