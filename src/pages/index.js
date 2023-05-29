@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+
 import React, { useState } from "react";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
@@ -28,7 +28,6 @@ const HomePage = () => {
 
   const handleRegisterSubmit = (event) => {
     event.preventDefault();
-    // Perform registration logic here
     console.log("Registering user...");
   };
 
