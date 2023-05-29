@@ -1,9 +1,9 @@
 
-import React, { useState } from "react";
+
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 
-const HomePage = () => {
+const LoginPage = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
@@ -42,7 +42,6 @@ const HomePage = () => {
       <div className="container flex justify-between items-center mx-auto relative">
         <div className="flex items-center">
           <Image src="/hlogo.png" alt="Logo" width={60} height={60} />
-          
         </div>
         <button
           className="text-white focus:outline-none flex item"
@@ -103,7 +102,6 @@ const HomePage = () => {
         )}
       </div>
     </header>
-   
 
       <div className="flex-grow flex items-center justify-center">
         <div className="bg-black p-8 rounded-lg shadow-md text-center">
@@ -194,15 +192,13 @@ const HomePage = () => {
             </div>
             <div className="flex items-center justify-center mt-6">
             <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
-  <FaTwitter className="text-white text-xl mr-2" />
-  <span>Sign up with Twitter</span>
-</button>
-
-<button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
-  <FaFacebook className="text-white text-xl mr-2" />
-  <span>Sign up with Facebook</span>
-</button>
-
+            <FaTwitter className="text-white text-xl mr-2" />
+              <span>Sign up with Twitter</span>
+            </button>
+            <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
+              <FaFacebook className="text-white text-xl mr-2" />
+              <span>Sign up with Facebook</span>
+            </button>
             </div>
           </div>
         </div>
@@ -279,16 +275,14 @@ const HomePage = () => {
               </p>
             </div>
             <div className="flex items-center justify-center mt-6">
-            <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
-  <FaTwitter className="text-white text-xl mr-2" />
-  <span>Sign up with Twitter</span>
-</button>
-
-<button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
-  <FaFacebook className="text-white text-xl mr-2" />
-  <span>Sign up with Facebook</span>
-</button>
-
+          <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
+            <FaTwitter className="text-white text-xl mr-2" />
+            <span>Sign up with Twitter</span>
+          </button>
+          <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
+            <FaFacebook className="text-white text-xl mr-2" />
+            <span>Sign up with Facebook</span>
+          </button>
             </div>
           </div>
         </div>
@@ -297,4 +291,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LoginPage;
