@@ -44,6 +44,22 @@
   background-position: center;
 }
 
+/* styles.css */
+@import 'tailwindcss/utilities';
+
+@scrollbar {
+  .tweet-container::-webkit-scrollbar {
+    @apply w-6;
+  }
+
+  .tweet-container::-webkit-scrollbar-thumb {
+    @apply bg-gray-400;
+  }
+
+  .tweet-container::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
 
 
 

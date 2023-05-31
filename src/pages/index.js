@@ -183,6 +183,15 @@ const LoginPage = () => {
             
             </form>
             <div className="mt-6 text-center">
+              <a href="./home">
+            <button
+            
+              type="submit"
+              className="bg-gray-500 hover:bg-red-500 text-white rounded-md px-2 py-2 transition-colors duration-300 ml-auto w-24"
+            >
+              login
+            </button>
+            </a>
               <p className="text-white">
                 Dont have an account?{" "}
                 <a href="#" className="text-blue-600">
@@ -191,6 +200,7 @@ const LoginPage = () => {
               </p>
             </div>
             <div className="flex items-center justify-center mt-6">
+         
             <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
             <FaTwitter className="text-white text-xl mr-2" />
               <span>Sign up with Twitter</span>

@@ -44,7 +44,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-fire min-h-screen flex flex-col text-white">
-      <title>Dark Society</title>
+      <title>Dark Society | Home</title>
       <header className="bg-black py-1">
         <div className="container flex justify-between items-center mx-auto relative">
           <div className="flex items-center">
@@ -116,15 +116,15 @@ const HomePage = () => {
         <div className="bg-black text-white w-11/12 p-8 rounded-lg shadow-lg font-space-mono">
           <div className="flex items-center mb-6">
             <Image
-              src="/profile.png"
+              src="/profile.jpg"
               alt="Profile Picture"
               width={60}
               height={60}
               className="rounded-full mr-4"
             />
             <div>
-              <h2 className="text-2xl font-bold">John Doe</h2>
-              <p className="text-gray-400">@johndoe</p>
+              <h2 className="text-2xl font-bold">Luan Silva</h2>
+              <p className="text-gray-400">@marlborao666</p>
             </div>
           </div>
           <form className="flex flex-col mb-6" onSubmit={handleTweetSubmit}>
@@ -151,37 +151,36 @@ const HomePage = () => {
             {tweets.map((tweet) => (
               <div className="flex items-start space-x-4" key={tweet.id}>
                 <Image
-                  src="/profile.png"
+                  src="/profile.jpg"
                   alt="Profile Picture"
                   width={50}
                   height={50}
                   className="rounded-full"
                 />
                 <div>
-                  <h3 className="text-xl font-bold">John Doe</h3>
+                  <h3 className="text-xl font-bold">Luan Silva</h3>
                   <p className="text-gray-400">{tweet.text}</p>
                   <div className="flex items-center mt-2">
-                  <button
-    className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-20"
-    onClick={() => handleRetweetClick(tweet.id)}
-  >
-    <FaRetweet className="mr-1" />
-    {tweet.retweets}
-  </button>
-  <button
-    className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-20"
-    onClick={() => handleCommentClick(tweet.id)}
-  >
-    <FaComment className="mr-1" />
-    {tweet.comments}
-  </button>
-  <button
-    className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none"
-    onClick={() => handleLikeClick(tweet.id)}
-  >
-    <FaHeart className="mr-" />
-   
-  </button>
+                    <button
+                      className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-20"
+                      onClick={() => handleRetweetClick(tweet.id)}
+                    >
+                      <FaRetweet className="mr-1" />
+                      {tweet.retweets}
+                    </button>
+                    <button
+                      className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-20"
+                      onClick={() => handleCommentClick(tweet.id)}
+                    >
+                      <FaComment className="mr-1" />
+                      {tweet.comments}
+                    </button>
+                    <button
+                      className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none"
+                      onClick={() => handleLikeClick(tweet.id)}
+                    >
+                      <FaHeart className="mr-" />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -191,7 +190,7 @@ const HomePage = () => {
       </div>
 
       <footer className="bg-black py-1">
-      <div className="container flex justify-center mx-auto">
+        <div className="container flex justify-center mx-auto">
           <FaGithub
             className="text-3xl text-white cursor-pointer hover:text-gray-200"
             onClick={() =>
