@@ -1,5 +1,5 @@
 
-
+import React, { useState } from "react";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 
