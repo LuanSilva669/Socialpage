@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { FaGithub, FaTwitter, FaHeart, FaRetweet, FaComment } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaHeart, FaRetweet, FaComment, FaHome, FaHashtag, FaBell, FaEnvelope, FaList } from "react-icons/fa";
 import Image from "next/image";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const HomePage = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -83,7 +85,7 @@ const HomePage = () => {
           </button>
           {showMenu && (
             <nav className="bg-black py-5 px-10 absolute top-full right-1 flex flex-col items-center">
-              <ul className="container flex flex-col items-center mx-auto">
+              <ul className="container flex flex-col items-start mx-auto">
                 <li className="my-2">
                   <a
                     href="https://github.com/LuanSilva669"
@@ -91,8 +93,8 @@ const HomePage = () => {
                     rel="noopener noreferrer"
                     className="text-white hover:text-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
                   >
-                    <FaGithub className="mr-2" />
-                    GitHub
+                    <FaHome className="mr-2" />
+                    Home
                   </a>
                 </li>
                 <li className="my-2">
@@ -102,8 +104,41 @@ const HomePage = () => {
                     rel="noopener noreferrer"
                     className="text-white hover:text-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
                   >
-                    <FaTwitter className="mr-2" />
-                    Twitter
+                    <FaBell className="mr-2" />
+                    Notifications
+                  </a>
+                </li>
+                <li className="my-2">
+                  <a
+                    href="https://twitter.com/marlborao666"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
+                  >
+                    <FaHashtag className="mr-2" />
+                    Explorer
+                  </a>
+                </li>
+                <li className="my-2">
+                  <a
+                    href="https://twitter.com/marlborao666"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
+                  >
+                    <FaEnvelope className="mr-2" />
+                    Message
+                  </a>
+                </li>
+                <li className="my-2">
+                  <a
+                    href="https://twitter.com/marlborao666"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-200 transition-colors duration-300 py-2 px-4 rounded flex items-center"
+                  >
+                    <FaList className="mr-2" />
+                    Lists
                   </a>
                 </li>
               </ul>
@@ -112,81 +147,100 @@ const HomePage = () => {
         </div>
       </header>
 
-      <div className="flex-grow flex justify-center items-center w-full">
-        <div className="bg-black text-white w-11/12 p-8 rounded-lg shadow-lg font-space-mono">
-          <div className="flex items-center mb-6">
-            <Image
-              src="/profile.jpg"
-              alt="Profile Picture"
-              width={60}
-              height={60}
-              className="rounded-full mr-4"
-            />
-            <div>
-              <h2 className="text-2xl font-bold">Luan Silva</h2>
-              <p className="text-gray-400">@marlborao666</p>
-            </div>
+      <div className="flex-grow flex justify-center  items-center ">
+      <Carousel
+  showThumbs={false}
+  infiniteLoop={false}
+  autoPlay={false}
+  interval={5000}
+>
+  <div className="bg-black text-white item-start px-20 h-max py-20 rounded-lg shadow-lg top-96 font-space-mono">
+    <div>
+      <div className=" w-4/12  p-8 rounded-lg shadow-lg font-space-mono">
+        <div className="flex align-middle flex-grow items-center mb-4 w-max">
+          <Image
+            src="/profile.jpg"
+            alt="Profile Picture"
+            width={60}
+            height={60}
+            className="rounded-full mr-4"
+          />
+          <div>
+            <h2 className="text-2xl font-bold w-max ">Luan Silva</h2>
+            <p className="text-gray-400">@marlborao666</p>
           </div>
-          <form className="flex flex-col mb-6" onSubmit={handleTweetSubmit}>
-            <textarea
-              className="border text-black border-gray-300 rounded-md px-4 py-3 mb-4 w-full resize-none"
-              rows="3"
-              placeholder="What's happening?"
-              value={tweetText}
-              onChange={(e) => setTweetText(e.target.value)}
-            ></textarea>
-            {tweetText.length > 10 && (
-              <p className="text-gray-400 text-sm mb-2">
-                {140 - tweetText.length} characters remaining
-              </p>
-            )}
-            <button
-              type="submit"
-              className="bg-gray-500 hover:bg-red-500 text-white rounded-md px-4 py-2 transition-colors duration-300 ml-auto w-24"
-            >
-              Tweet
-            </button>
-          </form>
-          <div className="overflow-y-auto max-h-40 space-y-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent">
-            {tweets.map((tweet) => (
-              <div className="flex items-start space-x-4" key={tweet.id}>
+        </div>
+        <form className="flex flex-col justify-between mb-6" onSubmit={handleTweetSubmit}>
+          <textarea
+            className="border text-black border-gray-300  rounded-md py-0.5 px-80 w-max mb-2 "
+            rows="3"
+            placeholder="What's happening?"
+            value={tweetText}
+            onChange={(e) => setTweetText(e.target.value)}
+          ></textarea>
+          {tweetText.length > 10 && (
+            <p className="text-gray-400 text-sm mb-2">
+              {140 - tweetText.length} characters remaining
+            </p>
+          )}
+          <button
+            type="submit"
+            className="bg-gray-500 hover:bg-red-500 text-white rounded-md px-4 py-2 transition-colors duration-300 ml-auto w-24"
+          >
+            Tweet
+          </button>
+        </form>
+        <div className="overflow-y-auto max-h-20 h-max w-96 space-y- scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent">
+          {tweets.map((tweet) => (
+            <div className="flex flex-col items-start space-x-10" key={tweet.id}>
+              <div className="flex items-center">
                 <Image
                   src="/profile.jpg"
                   alt="Profile Picture"
-                  width={50}
-                  height={50}
+                  width={10}
+                  height={10}
                   className="rounded-full"
                 />
                 <div>
                   <h3 className="text-xl font-bold">Luan Silva</h3>
                   <p className="text-gray-400">{tweet.text}</p>
-                  <div className="flex items-center mt-2">
-                    <button
-                      className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-20"
-                      onClick={() => handleRetweetClick(tweet.id)}
-                    >
-                      <FaRetweet className="mr-1" />
-                      {tweet.retweets}
-                    </button>
-                    <button
-                      className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-20"
-                      onClick={() => handleCommentClick(tweet.id)}
-                    >
-                      <FaComment className="mr-1" />
-                      {tweet.comments}
-                    </button>
-                    <button
-                      className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none"
-                      onClick={() => handleLikeClick(tweet.id)}
-                    >
-                      <FaHeart className="mr-" />
-                    </button>
-                  </div>
                 </div>
               </div>
-            ))}
-          </div>
+              <div className="flex items-center mt-2">
+                <button
+                  className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-4"
+                  onClick={() => handleRetweetClick(tweet.id)}
+                >
+                  <FaRetweet className="mr-1" />
+                  {tweet.retweets}
+                </button>
+                <button
+                  className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none mr-4"
+                  onClick={() => handleCommentClick(tweet.id)}
+                >
+                  <FaComment className="mr-1" />
+                  {tweet.comments}
+                </button>
+                <button
+                  className="text-gray-400 hover:text-red-500 transition-colors duration-300 focus:outline-none"
+                  onClick={() => handleLikeClick(tweet.id)}
+                >
+                  <FaHeart className="mr-2" />
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
+    </div>
+  </div>
+  <div className="bg-black text-white w-11/12 p-8 rounded-lg shadow-lg font-space-mono">
+    {/* Conteúdo do segundo container */}
+  </div>
+</Carousel>
+
+
+
       </div>
 
       <footer className="bg-black py-1">
