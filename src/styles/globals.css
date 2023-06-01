@@ -39,7 +39,7 @@
 }
 
 .bg-fire {
-  background-image: url('/fire-background.gif');
+  background-image: url('/bg.png');
   background-size: cover;
   background-position: center;
 }

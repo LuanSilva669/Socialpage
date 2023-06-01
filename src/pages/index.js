@@ -104,18 +104,18 @@ const LoginPage = () => {
     </header>
 
       <div className="flex-grow flex items-center justify-center">
-        <div className="bg-black p-8 rounded-lg shadow-md text-center">
+        <div className="bg-w p-8 rounded-lg shadow-md text-center">
           <div className="flex items-center justify-center mb-4">
             <Image src="/toplogo.png" alt="Logo" height={40} width={200} />
           </div>
-          <p className="text-gray-400 mb-4 font-space-mono">
-            Unveil the obscure secrets of our social network
+          <p className="text-black mb-4 font-space-mono">
+          Abandon the old ways and change to the new
           </p>
           <button
-            className="bg-firee bg-gray-800 text-white font-space-mono py-2 px-6 rounded-full duration-300 transition-colors hover:bg-red-500"
+            className="bg-firee bg-gray-800 text-white font-space-mono py-2 px-6 rounded-full duration-300 transition-colors  hover:bg-slate-500"
             onClick={handleLoginClick}
           >
-            Enjoy the darkness
+            Enjoy
           </button>
           <div className="flex justify-center">
             <button
@@ -151,7 +151,7 @@ const LoginPage = () => {
             >
               x
             </button>
-            <h2 className="text-2xl font-bold text-white mb-6">Login</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 font-space-mono">Login</h2>
             <Image
               src="/toplogo.png"
               alt="Logo"
@@ -161,17 +161,17 @@ const LoginPage = () => {
             />
             <form>
               <div className="mb-4">
-                <label htmlFor="username" className="text-white mb-2 block">
+                <label htmlFor="username" className="text-white mb-2 block font-space-mono">
                   Email or Phone
                 </label>
                 <input
                   type="text"
                   id="username"
-                  className="border border-gray-600 rounded-lg py-1 px-4 w-full focus:outline-none focus:ring focus:border-blue-500 bg-gray-700 text-white"
+                  className="border  border-gray-600 rounded-lg py-1 px-4 w-full focus:outline-none focus:ring focus:border-blue-500 bg-gray-700 text-white"
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="password" className="text-white mb-2 block">
+                <label htmlFor="password" className="text-white mb-2 block font-space-mono">
                   Password
                 </label>
                 <input
@@ -187,7 +187,7 @@ const LoginPage = () => {
             <button
             
               type="submit"
-              className="bg-gray-500 hover:bg-red-500 text-white rounded-md px-2 py-2 transition-colors duration-300 ml-auto w-24"
+              className="bg-gray-500  hover:bg-slate-500  text-white rounded-md  px-1 py-1 transition-colors duration-300 ml-auto font-space-mono w-24"
             >
               login
             </button>
@@ -201,11 +201,11 @@ const LoginPage = () => {
             </div>
             <div className="flex items-center justify-center mt-6">
          
-            <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
+            <button className="bg-gray-400 hover:bg-slate-500  hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
             <FaTwitter className="text-white text-xl mr-2" />
               <span>Sign up with Twitter</span>
             </button>
-            <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
+            <button className="bg-gray-400  hover:bg-slate-500  hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
               <FaFacebook className="text-white text-xl mr-2" />
               <span>Sign up with Facebook</span>
             </button>
@@ -225,7 +225,7 @@ const LoginPage = () => {
             >
               x
             </button>
-            <h2 className="text-2xl font-bold text-white mb-6">Register</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 font-space-mono">Register</h2>
             <Image
               src="/toplogo.png"
               alt="Logo"
@@ -235,7 +235,7 @@ const LoginPage = () => {
             />
             <form onSubmit={handleRegisterSubmit}>
               <div className="mb-4">
-                <label htmlFor="username" className="text-white mb-2 block">
+                <label htmlFor="username" className="text-white mb-2 block font-space-mono">
                   Username
                 </label>
                 <input
@@ -245,7 +245,7 @@ const LoginPage = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="text-white mb-2 block">
+                <label htmlFor="email" className="text-white mb-2 block font-space-mono">
                   Email
                 </label>
                 <input
@@ -255,7 +255,7 @@ const LoginPage = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="password" className="text-white mb-2 block">
+                <label htmlFor="password" className="text-white mb-2 block font-space-mono">
                   Password
                 </label>
                 <input
@@ -265,7 +265,7 @@ const LoginPage = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="confirm-password" className="text-white mb-2 block">
+                <label htmlFor="confirm-password" className="text-white mb-2 block font-space-mono">
                   Confirm Password
                 </label>
                 <input
@@ -277,7 +277,7 @@ const LoginPage = () => {
              
             </form>
             <div className="mt- text-center">
-              <p className="text-white">
+              <p className="text-white font-space-mono">
                 Already have an account?{" "}
                 <a href="#" className="text-blue-600">
                   Sign in
@@ -285,11 +285,11 @@ const LoginPage = () => {
               </p>
             </div>
             <div className="flex items-center justify-center mt-6">
-          <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
+          <button className="bg-gray-400  hover:bg-slate-500  hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
             <FaTwitter className="text-white text-xl mr-2" />
             <span>Sign up with Twitter</span>
           </button>
-          <button className="bg-blue-600 hover:bg-black hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
+          <button className="bg-gray-400  hover:bg-slate-500  hover:text-white font-bold py-2 px-4 rounded-full flex items-center justify-center mr-2 transition-colors">
             <FaFacebook className="text-white text-xl mr-2" />
             <span>Sign up with Facebook</span>
           </button>
