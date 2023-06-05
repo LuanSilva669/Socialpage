@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import spotifyApi from '/utils/spotify';
 
-const HomePage = () => {
+const PlaylistPage = () => {
+  const [playlists, setPlaylists] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
- 
+
+  useEffect(() => {
+    spotifyApi.getUserPlaylists().then((response) => {
+      setPlaylists(response.items);
+    });
+  }, []);
+
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
-
-  
 
   return (
     <div className="bg-fire min-h-screen flex flex-col text-white">
@@ -82,15 +87,15 @@ const HomePage = () => {
         </div>
       </header>
 
-      <div className="flex-grow flex justify-center items-center ">
-  <div className="flex flex-col justify-center items-center bg-black">
-    <div className="max-w-3xl w-full px-96 p-6 justify-start">
-      
-    </div>
-  </div>
-</div>
-
-<footer className="bg-black py-1">
+    <div>
+      <h1>Minhas playlists:</h1>
+      <ul>
+        {playlists.map((playlist) => (
+          <li key={playlist.id}>{playlist.name}</li>
+        ))}
+      </ul>
+      </div>
+      <footer className="bg-black py-1">
       <div className="container flex justify-center mx-auto">
         <div className="container flex justify-center mx-auto">
           <FaGithub
@@ -102,9 +107,8 @@ const HomePage = () => {
         </div>
         </div>    
       </footer>
-
-    </div>
+</div>
   );
 };
 
-export default HomePage;
+export default PlaylistPage;
