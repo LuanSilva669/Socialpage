@@ -103,20 +103,22 @@ const LoginPage = () => {
       </div>
     </header>
 
-      <div className="flex-grow flex items-center justify-center">
-        <div className="bg-w p-8 rounded-lg shadow-md text-center">
+      <div className="flex-grow flex items-center justify-center align-middle ">
+        <div className=" ">
           <div className="flex items-center justify-center mb-4">
             <Image src="/toplogo.png" alt="Logo" height={40} width={200} />
           </div>
-          <p className="text-black mb-4 font-space-mono">
+          <p className="text-black mb-4 font-space-mono ">
           Abandon the old ways and change to the new
           </p>
+          <div className="flex justify-center">
           <button
-            className="bg-firee bg-gray-800 text-white font-space-mono py-2 px-6 rounded-full duration-300 transition-colors  hover:bg-slate-500"
+            className="  bg-gray-800  text-white font-space-mono py-1 px-20 rounded-full left-10 duration-300 transition-colors  hover:bg-slate-500"
             onClick={handleLoginClick}
           >
             Enjoy
           </button>
+          </div>
           <div className="flex justify-center">
             <button
               className="flex justify-center text-white font-extralight hover:underline mt-4"
@@ -127,8 +129,8 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-
       <footer className="bg-black py-1">
+      <div className="container flex justify-center mx-auto">
         <div className="container flex justify-center mx-auto">
           <FaGithub
             className="text-3xl text-white cursor-pointer hover:text-gray-200"
@@ -137,7 +139,11 @@ const LoginPage = () => {
             }
           />
         </div>
+        </div>    
       </footer>
+
+
+     
 
       {/* Modal de Login */}
       {showLoginModal && (
